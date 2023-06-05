@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+    #slider {
+    position: relative;
+	width: 100%;
+}
+
+#tooplate_wrapper {
+	width: 780px;
+	margin: 0 auto;
+	background: url(../images/tooplate_body.jpg) top center no-repeat
+}
+
+#tooplate_header {
+	width: 780px;
+	height: 100px;
+	margin-bottom: 50px;
+}
+
+#site_title { 
+	float: left; 
+	width: 190px; 
+	height: 35px; 
+	margin-top: 72px; 
+}
+
+#site_title h1 { 
+	margin: 0; 
+	padding: 0; 
+}
+
+#site_title h1 a { 
+	display: block; 
+	width: 190px; 
+	height: 35px; 
+	color: #fff; 
+	text-indent: -10000px; 
+	background: url(../images/tooplate_logo.png) no-repeat; 
+}
+
+#menu {
+	float: right;
+	width: 560px;
+	height: 40px;
+	margin-top: 70px;
+	background: url(../images/tooplate_menu.png) no-repeat
+}
+
+#content {
+	clear: both;
+	width: 780px;
+	height: 470px;	
+	margin-bottom: 40px;
+	background: url(../images/tooplate_content_bg.png)
+}
+
+.content_section {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #ccc
+}
+
+.last_section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#footer {
+	clear: both;
+	width: 700px;
+	padding: 0 40px;
+}
+
+#footer_left { 
+	float: left;
+	width: 250px;
+	text-align: left
+}
+
+#footer a {
+	color: #f6bf34;
+}
+
+#social_box {
+	float: right;
+	height: 85px;
+	padding: 0;
+	
+}
+
+#social_box a {
+	display: inline-block;
+	margin-left: 20px;
+	width: 60px; height: 60px;
+}
+
+.scroll {
+    height: 470px;
+    width: 780px;
+    overflow: auto;
+    /* overflow-x: hidden; */
+    position: relative;
+    clear: left;
+}
+
+.scrollContainer div.panel {
+    height: 350px;
+    width: 700px;
+	padding: 40px;
+	overflow: hidden;
+}
+
+ul.navigation {
+    list-style: none;
+	margin: 0;
+    padding: 0;
+}
+
+ul.navigation li {
+    display: inline;
+    margin: 0;
+	padding: 0;
+}
+
+ul.navigation a {
+	float: left;
+	display: block;
+	width: 110px;
+	height: 32px;
+	padding: 10px 2px 0 0;
+	color: whitesmoke;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+    text-decoration: none;
+	background: url(../images/tooplate_menu_divider.png) no-repeat center right;
+}
+
+ul.navigation a:hover, ul.navigation a.selected {
+	color: #fff;
+}
+
+ul.navigation a:focus {
+    outline: none;
+}
+
+.scrollButtons {
+    position: absolute;
+    top: 300px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: 0
+}
+
+.scrollButtons.right {
+    right: 0
+}
+
+.hide {
+    display: none;
+}
+/*
+
+Template 2021 Galaxy
+
+http://www.tooplate.com/view/2021-galaxy
+
+*/
+
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #f9f6f3;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em; 
+	background-color: #07080a;
+	background-image: url(images/tooplate_body.jpg);
+	background-repeat: no-repeat;
+	background-position: top center
+}
+
+a, a:link, a:visited { color: #f1f0ed; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { margin: 0 0 15px 0; padding: 0; }
+img { border: none; }
+
+h1, h2, h3, h4, h5, h6 { color: #deddd6; font-family: Georgia, "Times New Roman", Times, serif; }
+h1 { font-size: 38px; font-weight: normal; margin: 0 0 20px 0; padding: 5px 0; }
+h2 { font-size: 30px; font-weight: normal; margin: 0 0 30px 0; font-weight: normal; }
+h3 { font-size: 16px; margin: 0 0 15px 0; padding: 0; padding: 0; font-weight: normal;  }
+h4 { font-size: 14px; margin: 0 0 5px 0; padding: 0; }
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+.cleaner_h10 { clear: both; width:100%; height: 10px; }
+.cleaner_h20 { clear: both; width:100%; height: 20px; }
+.cleaner_h30 { clear: both; width:100%; height: 30px; }
+.cleaner_h40 { clear: both; width:100%; height: 40px; }
+.cleaner_h50 { clear: both; width:100%; height: 50px; }
+.cleaner_h60 { clear: both; width:100%; height: 60px; }
+
+.float_l { float: left; }
+.float_r { float: right; }
+
+.image_wrapper { 
+	display: inline-block; 
+	border: 1px solid #000000; 
+	background: #252120; 
+	padding: 4px; 
+	margin-bottom: 10px; 
+}
+
+.image_fl { 
+	float: left; 
+	margin: 3px 30px 0 0; 
+}
+
+.image_fr { 
+	float: right; 
+	margin: 3px 0 0 30px; 
+}
+
+blockquote { font-style: italic; margin: 0 0 0 10px;}
+cite { font-weight: bold; font-size: 11px; color:#f0eee8; }
+cite span { color: #edebe6; }
+em { color: #f2f1ec; }
+
+.btn_more a {
+	display: inline-block;
+	font-weight: bold;
+	color: #000;
+	font-size: 12px;
+	padding: 2px 15px 2px 0;
+	text-decoration: none;
+}
+
+.btn_more a:hover {
+	padding-right: 20px;
+	text-decoration: none;
+}
+
+.col_380 { width: 380px; } 
+.col_320 { width: 320px; }
+.col_270 { width: 270px; }
+
+.service_list { 
+	margin: 0 0 0 15px; 
+	padding: 0; 
+	list-style: none; 
+}
+
+.service_list li { 
+	margin: 0;
+	padding: 0; 
+}
+
+.service_list li a { 
+	font-size: 16px; 
+	display: block; 
+	height: 25px; 
+	margin-bottom: 20px; 
+	padding-left: 40px; 
+	text-decoration: none; 
+}
+
+.service_list li .service_one { 
+	background: url(images/onebit_08.png) center left no-repeat; 
+}
+.service_list li .service_two { 
+	background: url(images/onebit_11.png) center left no-repeat; 
+}
+
+.service_list li .service_three { 
+	background: url(images/onebit_17.png) center left no-repeat; 
+}
+
+.service_list li .service_four { 
+	background: url(images/onebit_21.png) center left no-repeat; 
+}
+
+.service_list li .service_five { 
+	background: url(images/onebit_12.png) center left no-repeat; 
+}
+
+#contact_form {  
+	padding: 0; 
+}
+
+#contact_form form { 
+	margin: 0px; 
+	padding: 0px; 
+}
+
+#contact_form form .input_field { 
+	width: 300px; 
+	padding: 5px; 
+	background: #1b1a1a; 
+	border: 1px solid #3b3a3a; 
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 12px;
+	color: #aaa;
+	margin-top: 5px;
+}
+
+#contact_form form label { 
+	display: block; 
+	width: 100px; 
+	margin-right: 10px; 
+	font-size: 14px; 
+}
+
+#contact_form form textarea { 
+	width: 368px;  
+	height: 100px; 
+	padding: 5px; 
+	background: #1b1a1a; 
+	border: 1px solid #3b3a3a; 
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 12px;
+	color: #aaa;
+	margin-top: 5px; 
+}
+
+#contact_form form .submit_btn  {
+	padding: 5px 10px;
+	background: #1b1a1a; 
+	border: 1px solid #3b3a3a; 
+	color: #aaa;
+	font-size: 14px;
+}
+
+/* gallery */
+#gallery_container { 
+	clear: both; 
+	margin-top: 30px; 
+	padding-right: 40px; 
+} 
+
+#gallery_container .gallery_box {
+	float: left;
+	width: 145px;
+	display: block; 
+	padding: 0;
+	margin: 0 25px 30px 0;
+}
+ 
+.gallery_box img {
+	float: left;
+	width: 135px;
+	height: 80px;
+	border: 1px solid #000000; 
+	background: #252120; 
+	padding: 4px;
+}
+
+#gallery_container .gb_rm { margin-right:0 }
+/* end of gallery */
+</style>
+<!--
+
+Template 2021 Galaxy
+
+http://www.tooplate.com/view/2021-galaxy
+
+-->
+<title>Galaxy Website Template</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="tooplate_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="css/coda-slider.css" type="text/css" charset="utf-8" />
+
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo-1.3.3.js" type="text/javascript"></script>
+<script src="js/jquery.localscroll-1.2.5.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.serialScroll-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/coda-slider.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+	
+<div id="slider">
+   	<div id="tooplate_wrapper">
+    	
+        <div id="tooplate_header">
+            <div id="site_title"><h1><a href="#">Galaxy Template</a></h1></div>
+            
+            <div id="menu">
+                <ul class="navigation">
+                    <li><a href="#home" class="selected">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>    	
+            </div> <!-- end of tooplate_menu -->
+			
+            <div class="cleaner"></div>
+        </div> 
+    
+        <div id="content">
+          <div class="scroll">
+            <div class="scrollContainer">
+			
+              <div class="panel" id="home">
+                <div class="col_380 float_l">
+                  <h2>Welcome to Vartix Aerospace</h2>
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.if2xp5s7r5tPk5gSDagvIgHaEK&pid=Api&P=0&h=180" alt="Image 01" class="image_wrapper" />
+                  <p><em>Nullam at erat ipsum, quis tincidunt mauris. Nunc sit amet sapien eget eros iaculis hendrerit quis a enim. Vestibulum at leo ante, vel auctor velit.</em></p>
+                  <p><a href="http://www.tooplate.com/view/2021-galaxy">Galaxy</a> is <a rel="nofollow" href="http://www.tooplate.com">free website template</a> for everyone. You may edit and apply this template for any purpose. Credits go to <a rel="nofollow" href="http://www.photovaco.com">Free Photos</a> for photos and <a rel="nofollow" href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249" target="_blank">jwloh</a> for Aquaticus.Social social icons and <a rel="nofollow" href="http://www.icojoy.com">icojoy.com</a> for icons. Nunc posuere tristique tempor.</p>
+                </div>
+                <div class="col_270 float_r">
+                  <h2>Our Services</h2>
+                  <ul class="service_list">
+                    <li><a href="#" class="service_one">Morbi luctus vitae cursus</a></li>
+                    <li><a href="#" class="service_two">Pellentesq tris senectus</a></li>
+                    <li><a href="#" class="service_three">Duis at commodo molestie</a></li>
+                    <li><a href="#" class="service_four">In aliquet in libero</a></li>
+                    <li><a href="#" class="service_five">Maecenas ut pretium</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end of home -->
+			  
+              <div class="panel" id="about">
+                <div class="col_320 float_l">
+                  <h1>About Us</h1>
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.qepgolEkSJIA3KlGprgmRwHaE8&pid=Api&P=0&h=180" alt="Image 02" class="image_wrapper" />
+                  <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in lectus turpis. Vivamus cursus tortor quis leo ullamcorper auctor quis tincidunt metus. In non ipsum leo.</em></p>
+                  <p>Vestibulum vitae lectus a leo commodo egestas. Sed et ligula mauris. Donec interdum iaculis eros, sed porttitor justo ornare ac. Suspendisse ultrices arcu auctor sapien <a href="#">malesuada dictum</a>. Maecenas varius blandit risus in varius. Donec eget arcu nisi.</p>
+                </div>
+                <div class="col_320 float_r">
+                  <h2>Testimonials</h2>
+                  <blockquote>
+                    <p>With a passion for pushing the boundaries of aviation, we are on a mission to redefine the future of aerospace technology. Our team of brilliant engineers, designers, and visionaries is committed to crafting innovative solutions that transcend the limitations of conventional flight. From advanced propulsion systems to cutting-edge spacecraft designs, we are dedicated to revolutionizing the way we explore our skies and beyond. Guided by our unwavering commitment to safety, efficiency, and sustainability, we aim to create a new era of aerospace excellence. Join us as we soar to new heights and unlock the limitless possibilities of the cosmos. Vartix Aerospace—the future is now.</p>
+                    </blockquote>
+                  <div class="cleaner_h40"></div>
+                  <blockquote>
+                    <p>Integer et interdum risus. Vestibulum et tellus nec risus varius convallis. Suspendisse turpis massa, vestibulum quis lacinia porta, mattis non mi. Fusce consectetur eros in metus iaculis molestie. Cras malesuada egestas gravida.</p>
+                    <cite>Paul - <span>Web Designer</span></cite> </blockquote>
+                </div>
+              </div>
+			  <!-- end of aboutus -->
+			  
+              <div class="panel" id="services">
+                <div class="col_380 float_l">
+                  <h1>Service Overview</h1>
+                  <p><em>WE PROVIDE VARIOUS KIND OF SERVICES LIKE INTERNSHIPS</em></p>
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.Fcqrg8jWODpDmnUBxMEKvQHaE8&pid=Api&P=0&h=180" alt="Image 03" class="image_wrapper" />
+                  <p>Sed eu libero quis neque laoreet cursus. Fusce elit metus, elementum nec consequat a, interdum vitae est. Aliquam sit amet odio vitae dui blandit elementum. Ut eu dolor nunc. Nam in nunc sed mi adipiscing lacinia suscipit eget tortor. Vivamus lacinia lectus in <a href="#">velit aliquet</a> ac placerat magna euismod. In hac habitasse platea dictumst. Integer eget nibh eu libero cursus ultricies neque dolor imperdiet nulla a odio.</p>
+                </div>
+                <div class="col_270 float_r">
+                  <h1>Our Services</h1>
+                  <ul class="service_list">
+                    <li><a href="#" class="service_one">Morbi luctus vitae cursus</a></li>
+                    <li><a href="#" class="service_two">Pellentesq tris senectus</a></li>
+                    <li><a href="#" class="service_three">Duis at commodo molestie</a></li>
+                    <li><a href="#" class="service_four">In aliquet in libero</a></li>
+                    <li><a href="#" class="service_five">Maecenas ut pretium</a></li>
+                  </ul>
+                </div>
+              </div>
+			  <!-- end of service -->
+			  
+              <div class="panel" id="gallery">
+                <h1>Our Gallery</h1>
+                <div id="gallery_container">
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_01.jpg" alt="Image 01" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_02.jpg" alt="Image 02" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_03.jpg" alt="Image 03" /></a> </div>
+                  <div class="gallery_box gb_rm"> <a href="#"><img src="images/gallery/image_04.jpg" alt="Image 04" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_05.jpg" alt="Image 05" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_06.jpg" alt="Image 06" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_07.jpg" alt="Image 07" /></a> </div>
+                  <div class="gallery_box gb_rm"> <a href="#"><img src="images/gallery/image_08.jpg" alt="Image 08" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_09.jpg" alt="Image 09" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_10.jpg" alt="Image 10" /></a> </div>
+                  <div class="gallery_box"> <a href="#"><img src="images/gallery/image_11.jpg" alt="Image 11" /></a> </div>
+                  <div class="gallery_box gb_rm"> <a href="#"><img src="images/gallery/image_12.jpg" alt="Image 12" /></a> </div>
+                  <div class="cleaner"></div>
+                </div>
+              </div>
+			  <!-- end of gallery -->
+			  
+              <div class="panel" id="contact">
+                <h1>Contact Us</h1>
+                
+                <div class="cleaner_h10"></div>
+                <div class="col_380 float_l">
+                  <div id="contact_form">
+                    <form method="post" name="contact" action="#">
+					
+                      <label for="author">Name:</label><input type="text" id="author" name="author" class="required input_field" />
+					  <div class="cleaner_h10"></div>
+					  
+                      <label for="email">Email:</label><input type="text" id="email" name="email" class="validate-email required input_field" />
+                      <div class="cleaner_h10"></div>
+					  
+                      <label for="text">Message:</label><textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
+                      <div class="cleaner_h10"></div>
+					  
+                      <input type="submit" class="submit_btn float_l" name="submit" id="submit" value=" Send " />
+                      <input type="reset" class="submit_btn float_r" name="reset" id="reset" value="Reset" />
+					  
+                    </form>
+                  </div>
+                </div>
+				
+                <div class="col_270 float_r">
+                	<p>Pellentesque a ligula nunc. Morbi est risus, dapibus ut fringilla quis, imperdiet sed erat. Donec tempor venenatis pulvinar. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+                    
+					<h3>Mailing Address</h3>
+					<strong>Company Name</strong><br />
+					161-242 Etiam quis tortor ante,<br />
+					Cras sit amet sagittis, 16100 <br />
+					Integer lacinia <br /><br />
+					
+					Tel: 020-030-0020<br />
+					Fax: 040-010-0040<br />
+				</div>
+              </div>
+			  <!-- end of contact -->
+			  
+            </div>
+          </div>
+          <!-- end of scroll -->
+		</div>
+        
+  		<div id="footer">
+    
+        	<div id="social_box">
+            	<a href="#"><img src="images/facebook.png" alt="facebook" /></a>
+            	<a href="#"><img src="images/flickr.png" alt="flickr" /></a>
+            	<a href="#"><img src="images/myspace.png" alt="myspace" /></a>
+            	<a href="#"><img src="images/twitter.png" alt="twitter" /></a>
+            	<a href="#"><img src="images/youtube.png" alt="youtube" /></a>
+            </div>
+            
+            <div id="footer_left">
+				
+            	Copyright © 2048 <a href="#">Company Name</a><br />
+            	<!-- Galaxy by <a rel="nofollow" href="http://www.tooplate.com">Templates</a><br /> -->
+                
+            </div>
+			
+            <div class="cleaner"></div>
+ 		</div>
+    </div> 
+</div>
+
+</body>
+</html>
